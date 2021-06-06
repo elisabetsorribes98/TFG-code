@@ -1,0 +1,40 @@
+
+setting:
+
+#Default label value. 
+  label: 1
+
+#1. Isotropic voxel interpolation (resampling)
+  interpolator: 'sitkBSpline'
+  resampledPixelSpacing: [0.2, 0.2, 0.2]
+    
+
+#2. Intensity normalization:
+  normalize: true
+  normalizeScale: 100  # This allows you to use more or less the same bin width.
+
+#3. Image discretization: How can we calculate a good binwidth? First, extract firstorder: Range from the dataset to analyze, and choose a binwidth so, that range/binwidth remains approximately in this range of bins.
+
+  binWidth: 5
+
+  # Mask validation:
+  # correctMask and geometryTolerance are not needed, as both image and mask are resampled, if you expect very small
+  # masks, consider to enable a size constraint by uncommenting settings below:
+  #minimumROIDimensions: 2
+  #minimumROISize: 50
+
+imageType:
+  Original: {}
+  #Wavelet: {}
+
+featureClass:
+  # redundant Compactness 1, Compactness 2 an Spherical Disproportion features are disabled by default, they can be
+  # enabled by specifying individual feature names (as is done for glcm) and including them in the list.
+  shape:
+  firstorder:
+  glcm:  # If we want to disable a feature, we have to write the others. 
+  glrlm:
+  glszm:
+  gldm:
+  ngtdm:
+  
