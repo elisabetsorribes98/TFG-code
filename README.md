@@ -14,5 +14,5 @@ TgF344-AD animals, each of them evaluated at different ages between 3 and 18 mon
 database in order to obtainthe corresponding texture, shape and intensity features for each region. Then, severalmachine learning algorithms are used to test 
 the biomarker combination obtained fromthe feature selection with the aim of finding the best model that optimizes the accuracyof the classification, and 
 therefore, to obtain highly accurate non-invasive biomarkers ofthe disease.In the binary classification of rat images between control and Tg animals, the 
-highest accuracy reached in our method is 80.76% using hippocampus. Regarding the classification in the aforementioned 4 groups, an accuracy value of 82.69% 
+highest accuracy reached in our method is 78.84% using hippocampus. Regarding the classification in the aforementioned 4 groups, an accuracy value of 76.92% 
 is obtained in thehippocampus too. 
